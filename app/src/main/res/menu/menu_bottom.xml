@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menuReaction"
+        android:icon="@drawable/ic_add_reaction"
+        android:title="Reaction"/>
+
+    <item android:id="@+id/menuAlarm"
+        android:icon="@drawable/ic_alarm"
+        android:title="Alarm"/>
+
+    <item android:id="@+id/menuContact"
+        android:icon="@drawable/ic_contact"
+        android:title="Contact"/>
+</menu>
