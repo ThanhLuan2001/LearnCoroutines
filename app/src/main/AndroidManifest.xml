@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
     <application
         android:name=".MyApplication"
@@ -16,10 +18,15 @@
         android:theme="@style/Theme.LearnCoroutines"
         tools:targetApi="31">
         <activity
-            android:name=".notification.NotificationActivity"
-            android:exported="false" />
-        <activity
             android:name=".shared_preferences.DataLocalActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".bottom_navigation_view.MyActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,12 +34,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".bottom_navigation_view.MyActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"></activity>
+
+        <service android:name=".service.MyService"
+            android:exported="true" />
+
+        <receiver android:name=".broadcast_receiver.NetworkChangeReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

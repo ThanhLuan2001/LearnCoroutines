@@ -36,30 +36,6 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/edtName2"/>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvName2"
-        android:layout_marginBottom="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Data store"
-        android:layout_below="@id/btn1"
-        android:textSize="18sp"
-        android:layout_centerHorizontal="true"/>
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edtName2"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@id/tvName2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="Save"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/edtName2"/>
 
 
 

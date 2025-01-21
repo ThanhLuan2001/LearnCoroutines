@@ -29,7 +29,7 @@ class LifecycleFragment : Fragment() {
 
     private fun handle() {
         showLoading(true)
-        lifecycleScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             try {
                 val data = fetchDataFromServer()
                 Log.d("LifecycleScope", "Dữ liệu lấy được : $data")

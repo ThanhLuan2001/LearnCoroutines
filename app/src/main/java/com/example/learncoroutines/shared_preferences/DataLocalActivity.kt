@@ -27,10 +27,6 @@ class DataLocalActivity : AppCompatActivity() {
             btn1.setOnClickListener {
                 saveSharedPreferences()
             }
-
-            btn2.setOnClickListener {
-
-            }
         }
 
     }
